@@ -1,28 +1,25 @@
-﻿#include <iostream>
+#include <iostream>
+#include <cstdlib>
 using namespace std;
 
-int main() {
-	const int ftInMile = 5280;
-	const double kmInMile = 1.609344;
-	double dMile, dFt, dKm, dM;
+double getDistMile() {
+	double dist;
+
+	cout << "Indicate distance in miles" << endl;
+	cin >> dist;
 	
-	cout << "Distance in miles and feet" << endl;
+	return dist;
+}
 
-	cout << "Miles: " << endl;
-	cin >> dMile;
+double getDistKm(double dist) {
+	double kmInMile = 1.609344;
 
-	cout << "Feet: " << endl;
-	cin >> dFt;
+	return dist * kmInMile;
+}
 
-	double distMile = dMile + (double)dFt / ftInMile;
-	double distKm = distMile * kmInMile;
-
-	dKm = (int)distKm;
-	dM = (int)((distKm-dKm)*1000);
-
-	cout << "Distance in kilometers and meters" << endl;
-	cout << "Kilometers: " << dKm << endl;
-	cout << "Meters: " << dM << endl;
+int main() {
+	double distMile = getDistMile();
+	cout << "Distance in kilometers: " << getDistKm(distMile) << endl;
 
 	return 0;
 }
