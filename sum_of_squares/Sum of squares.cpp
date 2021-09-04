@@ -1,9 +1,10 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 
 int sum_of_squares(int value)
 {
     int sum = 0, copy_value = value;
+    
 
     while (value) {
         sum = sum + value * value;
@@ -16,24 +17,20 @@ int sum_of_squares(int value)
 
 int check_value(int value)
 {
-    if (value > 0) {
-        return value;
-    }
-    
-    else {
-        return 1;
+    if (value > 0) {   
+        sum_of_squares(value);
+    } else {
+        cout << "Incorrect value" << endl;
     }
 }
 
 
-int main() {
+int main() 
+{
     cout << "Enter the value > 0: " << endl;
 
     int value;
     cin >> value;
-
-    value = check_value(value);
-    sum_of_squares(value);
 
     return 0;
 }
