@@ -4,7 +4,6 @@ using namespace std;
 int sum_of_squares(int value)
 {
     int sum = 0, copy_value = value;
-    
 
     while (value) {
         sum = sum + value * value;
@@ -20,7 +19,7 @@ int check_value(int value)
     if (value > 0) {
         return value;
     }
-
+    
     else {
         return 0;
     }
