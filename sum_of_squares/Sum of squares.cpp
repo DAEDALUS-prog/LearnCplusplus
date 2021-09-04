@@ -21,7 +21,7 @@ int check_value(int value)
     }
     
     else {
-        return 0;
+        return 1;
     }
 }
 
