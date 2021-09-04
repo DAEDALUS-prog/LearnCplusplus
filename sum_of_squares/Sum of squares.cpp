@@ -5,7 +5,6 @@ int sum_of_squares(int value)
 {
     int sum = 0, copy_value = value;
     
-
     while (value) {
         sum = sum + value * value;
         value--;
